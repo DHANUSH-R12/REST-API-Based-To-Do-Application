@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow — To-Do</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">✓</span><span>TaskFlow</span></div>
+      <div class="side-label">WORKSPACE</div>
+      <button class="nav-item active" id="allNav"><span>▦</span> All tasks <span class="nav-count" id="navCount">0</span></button>
+      <div class="sidebar-note">
+        <div class="note-icon">✦</div>
+        <h3>Small steps.<br>Big progress.</h3>
+        <p>Keep your day focused and make every task count.</p>
+      </div>
+      <div class="sidebar-footer"><span class="status-dot"></span> REST API connected</div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div><p class="eyebrow" id="todayLabel">YOUR WORKSPACE</p><h1>My tasks<span class="title-dot">.</span></h1></div>
+        <div class="avatar" aria-label="User profile">TF</div>
+      </header>
+
+      <section class="welcome-row">
+        <div><h2>Make today count.</h2><p>Plan it, do it, check it off.</p></div>
+        <div class="progress-card"><div class="progress-copy"><span>Daily progress</span><strong id="progressText">0%</strong></div><div class="progress-track"><div id="progressBar"></div></div></div>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card"><div class="stat-icon purple">▤</div><div><span>Total tasks</span><strong id="totalStat">0</strong></div></article>
+        <article class="stat-card"><div class="stat-icon green">✓</div><div><span>Completed</span><strong id="doneStat">0</strong></div></article>
+        <article class="stat-card"><div class="stat-icon orange">◷</div><div><span>Remaining</span><strong id="remainingStat">0</strong></div></article>
+      </section>
+
+      <section class="tasks-panel">
+        <div class="panel-heading"><div><h2>Task list</h2><p>Everything you want to get done.</p></div>
+          <div class="filter-wrap"><button class="filter-btn selected" data-filter="all">All</button><button class="filter-btn" data-filter="active">Active</button><button class="filter-btn" data-filter="completed">Completed</button></div>
+        </div>
+
+        <form id="taskForm" class="task-form">
+          <div class="input-main"><span class="plus">＋</span><input id="taskTitle" type="text" maxlength="180" placeholder="What needs to be done?" required></div>
+          <input id="taskDescription" type="text" maxlength="500" placeholder="Add a short note (optional)" class="description-input">
+          <button class="add-btn" type="submit"><span>＋</span> Add task</button>
+        </form>
+        <p id="message" class="message" role="status"></p>
+        <div id="taskList" class="task-list"><div class="loading">Loading your tasks…</div></div>
+        <div class="list-footer"><span id="listSummary">Loading tasks</span><button id="clearCompleted" class="text-btn">Clear completed</button></div>
+      </section>
+      <footer class="page-footer">Built with HTML, CSS, JavaScript, PHP REST API &amp; MySQL</footer>
+    </main>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
