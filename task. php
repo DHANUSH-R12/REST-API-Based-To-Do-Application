@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit;
 }
 
+
 require_once __DIR__ . '/../config/database.php';
 
 function respond($data, int $status = 200): void {
