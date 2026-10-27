@@ -17,4 +17,4 @@ A responsive full-stack task manager built with HTML, CSS, JavaScript Fetch API,
 - **Tasks do not persist:** Ensure `database.sql` was imported successfully and the API is being served by PHP.
 
 ## Project flow
-Browser UI → JavaScript Fetch API → PHP REST endpoint → MySQL database → JSON response → UI refresh.
+Browser UI → JavaScript Fetch API → PHP REST endpoint → MySQL database → JSON response → UI refresh
